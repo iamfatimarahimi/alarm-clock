@@ -6,7 +6,7 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-body , .container{
+body , .container , .content{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,4 +21,35 @@ body{
     padding: 30px;
     border-radius: 10px;
     flex-direction: column;
+}
+.container h1{
+    font-size: 40PX;
+    margin: 30PX 0;
+}
+.container .content{
+    width: 100%;
+    justify-content: space-between;
+}
+.content .controls{
+    border: 1px solid #999;
+    width: calc(100% / 2 - 5px);
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+.content .controls select{
+    outline: 0;
+    border: 0;
+    width: 100%;
+    font-size: 16px;
+}
+.container button{
+    width: 100%;
+    outline: 0;
+    border: 0;
+    background: #4a98f7;
+    color: #fff;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-size: 20px;
 }
