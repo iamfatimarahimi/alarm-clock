@@ -21,17 +21,19 @@ for(let i = 59 ; i >=0 ; i--){
 }   
 setInterval(()=>{
     let date =new Date();
-    let hour =date.getHours();
-    let minuet =date.getMinutes();
-    let second =date.getSeconds();
+    let h =date.getHours();
+    let m =date.getMinutes();
+    let s =date.getSeconds();
 
-    hour = hour<10? '0'+ hour: hour;
-    minuet = minuet<10? '0'+ minuet: minuet;
-    second = second<10? '0'+ second: second;
-    timeBox.innerHTML = `${hour}: ${minuet}: ${second}`;
-    if(alarmTime == `${hour}: ${minuet}`){
-        console.log('ring');
+    h = h<10? '0'+ h: h;
+    m = m<10? '0'+ m: m;
+    s = s<10? '0'+ s: s;
+    timeBox.innerHTML = `${h}: ${m}: ${s}`;
+    if(alarmTime == `${h}: ${m}`){
+        ringtone.play();
+        ringtone.loop = true;
     }
+
 },1000)
 setAlarmBtn.addEventListener('click' , ()=>{
     alarmTime = `${selectMenu[0].value} : ${selectMenu[1].value}`
