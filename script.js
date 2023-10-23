@@ -2,6 +2,7 @@ const selectMenu = document.querySelectorAll('select')
 const timeBox = document.querySelector('.time')
 const setAlarmBtn = document.querySelector('button')
 let alarmTime;
+let content = document.querySelector('.content')
 const ringtone = new Audio('./files/ringtone.mp3');
 
 for(let i = 23 ; i >=0 ; i--){
@@ -40,4 +41,6 @@ setAlarmBtn.addEventListener('click' , ()=>{
     if(alarmTime.includes('Hour') || alarmTime.includes('Minuet') ){
         return alert(`Select the correct alarm!`)
     }
+    content.classlist.add('disable')
+    setAlarmBtn.innerText= 'Clear Alarm'
 })
