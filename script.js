@@ -2,6 +2,7 @@ const selectMenu = document.querySelectorAll('select')
 const timeBox = document.querySelector('.time')
 const setAlarmBtn = document.querySelector('button')
 let alarmTime;
+const ringtone = new Audio('./files/ringtone.mp3');
 
 for(let i = 23 ; i >=0 ; i--){
     i = i<10? '0'+i : i;
@@ -28,6 +29,9 @@ setInterval(()=>{
     minuet = minuet<10? '0'+ minuet: minuet;
     second = second<10? '0'+ second: second;
     timeBox.innerHTML = `${hour}: ${minuet}: ${second}`;
+    if(alarmTime == `${hour}: ${minuet}`){
+        console.log('ring');
+    }
 },1000)
 setAlarmBtn.addEventListener('click' , ()=>{
     alarmTime = `${selectMenu[0].value} : ${selectMenu[1].value}`
