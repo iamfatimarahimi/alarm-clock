@@ -1,6 +1,6 @@
 const selectMenu = document.querySelectorAll('select')
 const timeBox = document.querySelector('.time')
-const setAlarmBtn = document.querySelector('button')
+const setAlarmBtn = document.querySelector(' ')
 let alarmTime , alamState = 'noset';
 let content = document.querySelector('.content')
 const ringtone = new Audio('./files/ringtone.mp3'); 
